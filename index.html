@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>Ціна БОМБА</title>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <div class="logo">
+            <img src="image/logo.png">
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide1-->
+                <div class="swiper-slide">
+                    <div class="container container-slide1">
+                        <div class="cols cols-slide1">
+                            <div class="left-col slide1-animate-left">
+                                <div class="shoesImage">
+                                    <img src="image/shoes.png">
+                                </div>
+                            </div>
+                            <div class="right-col slide1-animate-right">
+                                <h1 class="h1">Купляти взуття online
+                                    <br>
+                                    <span>
+                                        <u>ЦЕ ПРОСТО</u>
+                                    </span>
+                                </h1>
+                                <div class="link-block">
+                                    <a href="#" class="button1" role="button">БІЛЬШЕ...</a>
+                                    <a href="#" class="button2" role="button">КУПИТИ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide2-->
+                <div class="swiper-slide">
+                    <div class="container container-slide2">
+                        <div class="cols cols-slide2">
+                            <div class="left-col left-col-slide2 slide2-animate-left">
+                                <h1 class="shopping">Shopping is
+                                    <img class="heart" src="image/Heart-icon.png">
+                                </h1>
+                            </div>
+                            <div class="right-col right-col-slide2 slide2-animate-right">
+                                <img class="woman" src="image/woman.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide3-->
+                <div class="swiper-slide">
+                    <div class="container container-slide3">
+                        <div class="cols">
+                            <div class="left-col left-col-slide3 slide3-animate-left">
+                                <h1 class="i">
+                                    <i>Замовляйте будь-де і будь-коли</i>
+                                </h1>
+                                <p>Замовлення Online у Shoes Room - це весело, швидко і безпечно. Купляючи у нас взуття ви отримуєте
+                                    бездоганний сервіс і гарантію на взуття 30 днів. Ми завжди на звязку і готові до співпраці.
+                                    Кожен день відправляємо більш як 1000 одиниць товарів. Наші клієнти завжди задоволенні
+                                    - Бо ми дбаємо про Вас.
+                                </p>
+                                <a href="#" class="button1" role="button">КУПИТИ</a>
+                            </div>
+                            <div class="right-col right-col-slide3 slide3-animate-right">
+                                <img src="image/slide2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/animate.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            on: {
+                slideChangeTransitionStart: function () {
+                    $('.slide1-animate-left, .slide3-animate-left').animateCss('slideInLeft');
+                    $('.slide1-animate-right, .slide3-animate-right').animateCss('slideInRight');
+                    $('.slide2-animate-left').animateCss('zoomIn');
+                    $('.slide2-animate-right').animateCss('fadeInUp');
+                    $('.button1').animateCss('bounceInUp');
+                    $('.button2').animateCss('bounceInUp');
+                    $('.i').animateCss('bounceInDown');
+
+                },
+            },
+
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            effect: 'fade',
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+
+            },
+
+        });
+    </script>
+</body>
+
+</html>
